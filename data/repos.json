@@ -1,0 +1,19 @@
+{
+    "repositories": [
+        {
+            "url": "https://github.com/pallets/click.git",
+            "path": "data/repos/click",
+            "ref": null
+        },
+        {
+            "url": "https://github.com/pallets/werkzeug.git",
+            "path": "data/repos/werkzeug",
+            "ref": null
+        },
+        {
+            "url": "https://github.com/pallets/flask.git",
+            "path": "data/repos/flask",
+            "ref": null
+        }
+    ]
+}

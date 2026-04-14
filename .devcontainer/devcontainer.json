@@ -1,5 +1,5 @@
 {
-    "name": "Python Ciberseguridad Dev Container",
+    "name": "sbom-vuln-analysis-tarea-3",
     "build": {
         "dockerfile": "Dockerfile",
         "context": "."
@@ -12,12 +12,7 @@
                 "python.formatting.provider": "black",
                 "editor.formatOnSave": true,
                 "notebook.formatOnSave.enabled": true,
-                "jupyter.notebook.defaultKernel": "Python (ciberseguridad)",
-                "jupyter.kernels.filter": [
-                    {
-                        "name": "ciberseguridad"
-                    }
-                ]
+                "jupyter.notebook.defaultKernel": "sbom-vuln-analysis"
             },
             "extensions": [
                 "ms-python.python",
@@ -27,7 +22,10 @@
             ]
         }
     },
-    "postCreateCommand": "touch .welcome_flag && uv sync && uv run python -m ipykernel install --user --name ciberseguridad --display-name 'Python (ciberseguridad)' && codeql pack download codeql/python-queries codeql/javascript-queries codeql/java-queries || true && grype db update || true && uv run scripts/add_submodules.py",
+    "postCreateCommand": "uv sync && grype db update && uv run scripts/add_submodules.py",
     "remoteUser": "vscode",
-    "runArgs": ["--name", "python-ciberseguridad-dev-container"]
+    "runArgs": ["--name", "sbom-vuln-analysis-tarea-3"],
+    "mounts": [
+        "source=${localWorkspaceFolder}/data,target=${containerWorkspaceFolder}/data,type=bind,consistency=cached"
+    ]
 }

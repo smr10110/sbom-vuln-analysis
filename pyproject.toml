@@ -1,0 +1,15 @@
+[project]
+name = "sbom-vuln-analysis"
+version = "0.1.0"
+description = "Generación de SBOMs y análisis de vulnerabilidades"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.2",
+    "matplotlib>=3.9",
+    "seaborn>=0.13",
+    "jupyter>=1.1",
+    "ipykernel>=6.29",
+]
+
+[dependency-groups]
+dev = []
