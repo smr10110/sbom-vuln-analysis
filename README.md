@@ -27,5 +27,6 @@ En caso de que se quiera utilizar con otra organizacion hay que:
 2. Borrar el contenido de sboms
 3. Borrar el contenido de vulns
 4. Cambiar el nombre de la organizacion en scripts\1_clone_repos. La linea ORG = "pallets" en donde
-pallets es el nombre de la organizacion a analizar.
+pallets es el nombre de la organizacion a analizar. Y MAX_REPOS = 10 la cantidad de repositorios que
+deseen analizar.
 
