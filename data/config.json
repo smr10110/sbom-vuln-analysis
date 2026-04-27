@@ -2,8 +2,7 @@
     "repos_dir": "data/repos",
     "output_dir": "data/results",
     "repositories": [
-        "https://github.com/apache/superset",
-        "https://github.com/apache/echarts"
+        "https://github.com/apache/allura"
     ],
     "organizations": [],
     "clone_options": {
